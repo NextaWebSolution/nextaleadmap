@@ -309,5 +309,3 @@ php tests/run.php                                          # self-test
 Want it installed, branded for your agency, or customised for your workflow?
 Book a free demo: 🌐 [nextawebsolution.com](https://nextawebsolution.com) · 📞 +91 22 6998 9200
 
-<sub>Inspired by the open-source <a href="https://github.com/Mahanaicoach/google-maps-scraper-kit">google-maps-scraper-kit</a> (MIT) — see <a href="FEATURES.md">FEATURES.md</a> for what was ported.
-City presets © <a href="https://www.geonames.org/">GeoNames</a>, CC BY 4.0. Console commands, worker modes and release tooling: <a href="UPDATES.md">UPDATES.md</a>, <a href="SECURITY.md">SECURITY.md</a>.</sub>
