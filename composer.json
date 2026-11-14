@@ -1,0 +1,27 @@
+{
+    "name": "nexta/nextaleadmap",
+    "description": "NextaLeadMap - self-hosted business lead research and enrichment platform",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.3",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-sodium": "*",
+        "ext-zip": "*",
+        "ext-zlib": "*"
+    },
+    "suggest": {
+        "ext-intl": "Better Unicode folding for city search",
+        "ext-fileinfo": "MIME detection for uploaded settings files"
+    },
+    "autoload": {
+        "psr-4": { "App\\": "src/" },
+        "files": ["src/helpers.php"]
+    },
+    "config": { "optimize-autoloader": true, "sort-packages": true }
+}

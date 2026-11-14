@@ -1,0 +1,19 @@
+# NextaLeadMap - root .htaccess for cPanel / shared hosting (app uploaded into public_html).
+# Everything is served from /public; application code, .env and storage are never reachable.
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Block dotfiles (.env, .git, .htaccess) and sensitive files anywhere
+    RewriteRule (^|/)\. - [F,L]
+    RewriteRule ^(composer\.(json|lock)|VERSION|.*\.(md|sql|log|lock|sh|bak|zip|gz))$ - [F,L]
+    # Route all requests into /public
+    RewriteRule ^public/ - [L]
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

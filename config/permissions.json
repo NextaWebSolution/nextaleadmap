@@ -1,0 +1,43 @@
+{
+    "permissions": {
+        "dashboard.view": "View dashboard",
+        "jobs.view": "View own search jobs",
+        "jobs.view_all": "View every user's jobs and leads",
+        "jobs.create": "Create search jobs",
+        "jobs.cancel": "Cancel / retry jobs",
+        "jobs.delete": "Delete jobs",
+        "leads.view": "View leads",
+        "leads.update": "Change lead status and notes",
+        "leads.export": "Export CSV / JSON",
+        "leads.delete": "Delete leads",
+        "apikeys.manage": "Manage own API keys",
+        "users.manage": "Manage users",
+        "roles.manage": "Manage roles and permissions",
+        "settings.manage": "Change application settings",
+        "providers.manage": "Manage provider credentials",
+        "audit.view": "View audit log",
+        "system.manage": "Backups, updates and system tools"
+    },
+    "roles": {
+        "admin": {
+            "name": "Administrator",
+            "description": "Full access to everything",
+            "permissions": ["*"]
+        },
+        "manager": {
+            "name": "Manager",
+            "description": "Runs searches, sees all leads, manages team members",
+            "permissions": ["dashboard.view", "jobs.view", "jobs.view_all", "jobs.create", "jobs.cancel", "jobs.delete", "leads.view", "leads.update", "leads.export", "leads.delete", "apikeys.manage", "audit.view"]
+        },
+        "analyst": {
+            "name": "Analyst",
+            "description": "Runs own searches and works own leads",
+            "permissions": ["dashboard.view", "jobs.view", "jobs.create", "jobs.cancel", "leads.view", "leads.update", "leads.export", "apikeys.manage"]
+        },
+        "viewer": {
+            "name": "Viewer",
+            "description": "Read-only access to own data",
+            "permissions": ["dashboard.view", "jobs.view", "leads.view"]
+        }
+    }
+}

@@ -1,0 +1,3 @@
+# Ed25519 public key(s) that sign NextaLeadMap releases, base64, one per line.
+# Generate on your build machine:  php tools/release.php keygen
+# Paste the PUBLIC key below (keep the secret key offline). Updates stay disabled until a key is present.

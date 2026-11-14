@@ -1,0 +1,7 @@
+.env
+/vendor/
+/storage/*/*
+!/storage/*/.gitkeep
+/storage/installed.lock
+/storage/maintenance.json
+node_modules/
